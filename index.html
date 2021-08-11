@@ -19,7 +19,15 @@
         const canvas = document.querySelector(".canvas-below");
         drawGuideline(canvas);
 
+        // First signature
         $(".container-above").jSignature({
+          "background-color": "transparent",
+          width: "100%",
+          height: "150px",
+        });
+
+        // Last signature
+        $(".container-above-2").jSignature({
           "background-color": "transparent",
           width: "100%",
           height: "150px",
@@ -29,9 +37,18 @@
   </head>
   <body>
     <h1>Signature App</h1>
+    <br />
+    <h2>Guideline using canvas</h2>
     <div class="container">
       <canvas class="canvas-below"></canvas>
       <div class="container-above"></div>
+    </div>
+    <br />
+    <h2>Guideline using container</h2>
+    <div class="container">
+      <div class="container-guideline-edge"></div>
+      <div class="container-guideline-center"></div>
+      <div class="container-above-2"></div>
     </div>
   </body>
 </html>
