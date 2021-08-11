@@ -1,24 +1,25 @@
-function draw() {
-  const canvas = document.querySelector(".canvas-below");
-
+function drawGuideline(canvas) {
   if (!canvas || (canvas && !canvas.getContext)) return;
 
   const ctx = canvas.getContext("2d");
 
-  drawLine(ctx, [0, 25], [650, 25], "gray", 1, false);
-  drawLine(ctx, [0, 75], [650, 75], "red", 1, true);
-  drawLine(ctx, [0, 125], [650, 125], "blue", 1, false);
+  ctx.lineWidth = 1;
+
+  drawLine(ctx, 0, 25, 650, "gray", 1, false);
+  drawLine(ctx, 0, 75, 650, "red", 1, true);
+  drawLine(ctx, 0, 125, 650, "blue", 1, false);
 }
 
 function drawLine(
   ctx,
-  begin,
-  end,
-  stroke = "black",
+  x,
+  y,
+  length,
+  style = "black",
   width = 1,
   dashed = false
 ) {
-  if (stroke) ctx.strokeStyle = stroke;
+  if (style) ctx.strokeStyle = style;
   if (width) ctx.lineWidth = width;
 
   ctx.beginPath();
@@ -29,8 +30,11 @@ function drawLine(
   } else {
     ctx.setLineDash([]);
   }
-
-  ctx.moveTo(...begin);
-  ctx.lineTo(...end);
+  // For even stroke widths you can use integers for coordinates,
+  // for odd stroke widths you want to use .5 to get crisp lines
+  // that fill the pixels correctly.
+  ctx.moveTo(x, y + 0.5);
+  ctx.lineTo(x + length, y + 0.5);
+  ctx.closePath();
   ctx.stroke();
 }
