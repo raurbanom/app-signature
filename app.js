@@ -7,10 +7,10 @@ function drawGuideline(canvas) {
 
   ctx.lineWidth = 1;
 
-  drawLine(ctx, 0, parseInt(height * 0.25), width, "gray", 1, false);
+  drawLine(ctx, 0, parseInt(height * 0.25), width, "#E0E0E0", 1, false);
   height * 0.25;
-  drawLine(ctx, 0, parseInt(height * 0.5), width, "red", 1, true);
-  drawLine(ctx, 0, parseInt(height * 0.75), width, "blue", 1, false);
+  drawLine(ctx, 0, parseInt(height * 0.5), width, "#E0E0E0", 1, true);
+  drawLine(ctx, 0, parseInt(height * 0.75), width, "#9E9E9E", 1, false);
 }
 
 function drawLine(
