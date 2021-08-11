@@ -1,0 +1,22 @@
+.container {
+    border: 1px solid gray;
+    background: white;
+    width: 650px;
+    height: 150px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.canvas-below {
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.canvas-above {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}

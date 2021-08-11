@@ -1,0 +1,23 @@
+{
+  "name": "app-signature",
+  "version": "1.0.0",
+  "description": "Signature App using jSignature plugin",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raurbanom/app-signature.git"
+  },
+  "keywords": [
+    "signature",
+    "canvas"
+  ],
+  "author": "Richar Urbano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raurbanom/app-signature/issues"
+  },
+  "homepage": "https://github.com/raurbanom/app-signature#readme"
+}
